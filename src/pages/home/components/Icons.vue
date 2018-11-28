@@ -35,24 +35,24 @@ export default {
         imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/e3/67df61427c8e1302.png',
         desc: '川剧变脸'},{
         id: '0005',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-        desc: '景点门票'
+        imgUrl: 'https://img1.qunarzz.com/piao/fusion/1811/1d/c46140e32fffa502.png',
+        desc: '去哪甄选'
       },{
         id: '0006',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/ab/6f7d6e44963c9302.png',
-        desc: '泡温泉'
+        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/fc/b10a6b2e4f0fe102.png',
+        desc: '滑雪'
       },{
         id: '0007',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
-        desc: '成都必游'
+        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/87/20656da0ac042002.png',
+        desc: '黑水彩林'
       },{
         id: '0008',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/e3/67df61427c8e1302.png',
-        desc: '川剧变脸'
+        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
+        desc: '一日游'
       },{
         id: '0009',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/e3/67df61427c8e1302.png',
-        desc: '川剧变脸'}
+        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/54/35899492b1302802.png',
+        desc: '成都熊猫基地'}
         ]
     }
   },
@@ -74,11 +74,13 @@ export default {
 
 <style lang="stylus" scoped>
   @import '~styles/varibles.styl';
-     @import '~styles/minxins.styl';
+  @import '~styles/minxins.styl';
   .icons >>> .swiper-container
     height: 0
     padding-bottom: 50%
-  .icon
+  .icons
+    margin-top: .1 rem
+    .icon
       position: relative
       overflow: hidden
       float: left
