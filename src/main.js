@@ -10,6 +10,7 @@ import 'swiper/dist/css/swiper.css';// 引入轮播图
 import App from './App';
 import router from './router';
 
+
 Vue.config.productionTip = false;
 fastClick.attach(document.body);// 解决移动端click时间300ms延迟的问题
 Vue.use(VueAwesomeSwiper);

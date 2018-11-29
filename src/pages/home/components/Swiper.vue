@@ -1,7 +1,7 @@
 <template>
 <div class="wrapper">
-  <swiper :options="swiperOption"  >
-    <swiper-slide v-for="item of swiperList" :key="item.id">
+  <swiper :options="swiperOption" v-if="showSwiper" >
+    <swiper-slide v-for="item of list" :key="item.id">
       <!--在组件中使用:src进行绑定-->
       <img class="swiper-img" :src="item.imgUrl">
     </swiper-slide>
@@ -14,22 +14,22 @@
 <script>
 export default {
   name: 'HomeSwiper',
+  props:{
+    list: Array
+  },
   data (){
     return {
       swiperOption: {
         pagination: '.swiper-pagination',
         loop: true,
       }
-      ,swiperList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1809/12/856f100069809e02.jpg_750x200_e3485a2b.jpg'
-        },
-        {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1806/e5/fc2bfc8bfcccd402.jpg_750x200_1218ab5f.jpg'
-      }]
     }
   },
+  computed: {
+    showSwiper () {
+      return this.list.length;
+    }
+  }
 }
 </script>
 
