@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-    <router-view/>
+    <!--使路由的内容加载一次后存在缓存中-->
+    <keep-alive>
+      <router-view/>
+    </keep-alive>
   </div>
 </template>
 

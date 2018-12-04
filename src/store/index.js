@@ -15,10 +15,10 @@ export default new Vuex.Store({
   //   }
   // },
   mutations,
-  getters: {
-    doubleCity (state) { //类似于computed,对数据进行处理
-      return state.city + '' + state.city;
-    }
-  }
+  // getters: {
+  //   doubleCity (state) { //类似于computed,对数据进行处理
+  //     return state.city + '' + state.city;
+  //   }
+  // }
 })
 

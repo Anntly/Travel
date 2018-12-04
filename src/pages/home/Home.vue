@@ -16,6 +16,7 @@ import HomeIcons from './components/Icons';// 引入录播图
 import HomeRecommend from './components/Recommend'; //引入推荐
 import HomeWeekend from './components/Weekend'; //引入推荐
 import axios from 'axios';// 引入ajax
+import { mapState } from 'vuex';// 引入vuex的state数据
 
 export default {
   name: 'Home',
@@ -28,15 +29,19 @@ export default {
   },
   data () {
     return {
+      lastCity: '',
       swiperList: [],
       iconList: [],
       recommendList: [],
       weekendList: [],
     }
   },
+  computed: {
+    ...mapState(['city'])
+  },
   methods: {
     getHomeInfo(){
-      axios.get('/api/index.json')
+      axios.get('/api/index.json?city='+this.city)
         .then(this.getHomeInfoSucc);
     },
     getHomeInfoSucc (res) {
@@ -52,7 +57,14 @@ export default {
     },
   },
   mounted () {
+    this.lastCity = this.city; //加载时保存city
     this.getHomeInfo();
+  },
+  activated () { //路由的钩子函数,当页面重新被显示的时候执行
+    if(this.lastCity != this.city){ //当两次城市不相同时发送ajax
+    this.lastCity = this.city;
+      this.getHomeInfo();
+    }
   }
 };
 </script>
