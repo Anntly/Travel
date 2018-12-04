@@ -3,6 +3,7 @@
 import Vue from 'vue';
 import VueAwesomeSwiper from 'vue-awesome-swiper';
 import fastClick from 'fastclick';
+import store from './store';
 import 'styles/reset.css';// 解决兼容问题
 import 'styles/border.css';// 解决border1px问题
 import 'styles/iconfont.css';// 引入iconfont
@@ -19,6 +20,7 @@ Vue.use(VueAwesomeSwiper);
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>',
 });
