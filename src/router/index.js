@@ -25,4 +25,8 @@ export default new Router({
       component: Detail,
     },
   ],
+  //使页面滚动行为不共享
+  scrollBehavior (to,from, savedPosition) {
+    return {x:0 ,y:0}
+  }
 });
