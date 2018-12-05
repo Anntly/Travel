@@ -64,6 +64,7 @@ export default {
       text-align: center
       font-size: .4rem
   .header-fixed
+    z-index: 2
     position: fixed
     top: 0
     left: 0
