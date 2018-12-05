@@ -43,7 +43,10 @@ export default {
     }
   },
   activated () {
-    window.addEventListener('scroll',this.handleScroll)
+    window.addEventListener('scroll',this.handleScroll); //需要对全局事件解绑
+  },
+  deactivated () { //页面即将被隐藏执行
+    window.removeEventListener('scroll',this.handleScroll);
   }
 }
 </script>
